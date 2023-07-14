@@ -32,12 +32,12 @@ function sendMail() {
     const templateID = "template_4ocb9er";
 
     emailjs.send(serviceID, templateID, params)
-    // .then(res=>{
-    //     document.getElementById("email").value = "";
-    //     console.log(res);
-    //     alert("Your message sent successfully!!")
+    .then(res=>{
+        document.getElementById("email").value = "";
+        console.log(res);
+        // alert("Your message sent successfully!!")
 
-    // })
+    })
     .catch(err=>console.log(err));
 
 }
@@ -46,8 +46,80 @@ function sendMail() {
 
 
 
+// const loaderButton = document.getElementById('loaderButton');
+// const loader = document.getElementById('loader');
+// const buttonText = document.getElementById('buttonText');
+// const textInput = document.getElementById('textInput');
+// const successPopup = document.getElementById('successPopup');
+// const closeButton = document.getElementById('closeButton');
 
-const successButton = document.getElementById('successButton');
+// loaderButton.addEventListener('click', function() {
+//   const inputValue = textInput.value.trim();
+//   if (inputValue !== '') {
+//     loader.classList.remove('hidden');
+//     buttonText.classList.add('hidden');
+
+//     // Simulating an asynchronous action
+//     setTimeout(function() {
+//       loader.classList.add('hidden');
+//       buttonText.classList.remove('hidden');
+//       successPopup.classList.remove('hidden');
+//     }, 2000); // Delay of 2 seconds (2000 milliseconds)
+//   }
+// });
+
+// closeButton.addEventListener('click', function() {
+//   successPopup.classList.add('hidden');
+// });
+
+
+
+
+// const loaderButton = document.getElementById('loaderButton');
+// const loader = document.getElementById('loader');
+// const buttonText = document.getElementById('buttonText');
+// const textInput = document.getElementById('email')
+
+// loaderButton.addEventListener('click', function() {
+//     const inputValue = textInput.value.trim();
+//     if (inputValue !== '') {
+//       loader.classList.remove('hidden');
+//       buttonText.classList.add('hidden');
+
+//       // Simulating an asynchronous action
+//       setTimeout(function() {
+//         loader.classList.add('hidden');
+//         buttonText.classList.remove('hidden');
+//       }, 1000); // Delay of 2 seconds (2000 milliseconds)
+//     }
+//   });
+
+
+
+//   const successButton = document.getElementById('loaderButton');
+//   const successPopup = document.getElementById('successPopup');
+//   const closeButton = document.getElementById('closeButton');
+  
+//   successButton.addEventListener('click', function() {
+//     const inputValue = textInput.value.trim();
+//     if(inputValue !== ''){
+//         setTimeout(function() {
+//             successPopup.classList.remove('hidden');
+//           }, 1000);
+//     }
+//      // Delay of 2 seconds (2000 milliseconds)
+//   });
+  
+//   closeButton.addEventListener('click', function() {
+//     successPopup.classList.add('hidden');
+//   });
+
+
+
+
+
+
+const successButton = document.getElementById('loaderButton');
 const successPopup = document.getElementById('successPopup');
 const closeButton = document.getElementById('closeButton');
 
@@ -60,3 +132,22 @@ successButton.addEventListener('click', function() {
 closeButton.addEventListener('click', function() {
   successPopup.classList.add('hidden');
 });
+
+
+
+const loaderButton = document.getElementById('loaderButton');
+const loader = document.getElementById('loader');
+const buttonText = document.getElementById('buttonText');
+const textInput = document.getElementById('email')
+
+loaderButton.addEventListener('click', function() {
+  loader.classList.remove('hidden');
+  buttonText.classList.add('hidden');
+
+  // Simulating an asynchronous action
+  setTimeout(function() {
+    loader.classList.add('hidden');
+    buttonText.classList.remove('hidden');
+  }, 1000); // Delay of 2 seconds (2000 milliseconds)
+});
+
