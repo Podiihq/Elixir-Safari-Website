@@ -126,7 +126,7 @@ const closeButton = document.getElementById('closeButton');
 successButton.addEventListener('click', function() {
   setTimeout(function() {
     successPopup.classList.remove('hidden');
-  }, 1000); // Delay of 2 seconds (2000 milliseconds)
+  }, 1000);
 });
 
 closeButton.addEventListener('click', function() {
@@ -148,6 +148,6 @@ loaderButton.addEventListener('click', function() {
   setTimeout(function() {
     loader.classList.add('hidden');
     buttonText.classList.remove('hidden');
-  }, 1000); // Delay of 2 seconds (2000 milliseconds)
+  }, 1000); 
 });
 
